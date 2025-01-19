@@ -1,0 +1,6 @@
+github.com/Asri-Mohamad/Master_Function v0.0.0-20250118232424-bdf4ecc91550 h1:sq2CRAsg3+RaMDwLmCImhEIC6jeVQ5HnlUwE56LiL3Y=
+github.com/Asri-Mohamad/Master_Function v0.0.0-20250118232424-bdf4ecc91550/go.mod h1:4lz8Wue3WEBO8AcIJuwvpdXNfKCnNmINg89lsqw5Zv8=
+golang.org/x/sys v0.29.0 h1:TPYlXGxvx1MGTn2GiZDhnjPA9wZzZeGKHHmKhHYvgaU=
+golang.org/x/sys v0.29.0/go.mod h1:/VUhepiaJMQUp4+oa/7Zr1D23ma6VTLIYjOOTFZPUcA=
+golang.org/x/term v0.28.0 h1:/Ts8HFuMR2E6IP/jlo7QVLZHggjKQbhu/7H0LJFr3Gg=
+golang.org/x/term v0.28.0/go.mod h1:Sw/lC2IAUZ92udQNf3WodGtn4k/XoLyZoh8v/8uiwek=
