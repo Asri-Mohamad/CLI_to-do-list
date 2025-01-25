@@ -19,9 +19,12 @@ type taskStruct struct {
 
 func main() {
 	var taskMaster []taskStruct
-
+	var Task = taskStruct{}
+	var command string
+	var num int
+	var error bool
 	for {
-		command, task, date, time, num, error := mainMenuProcess(startReadCommand(), &taskMaster)
+		command, Task.Task, Task.Date, Task.Time, num, error = mainMenuProcess(startReadCommand(), &taskMaster)
 		if command == "exit" {
 			return
 		} else {
@@ -34,20 +37,15 @@ func main() {
 				} else {
 					switch command {
 					case "add":
-						addTask(&taskMaster, task, date, time)
-						//fmt.Println("commmand :", command, "task:", task, "date:", date, "time:", time, "number", num, "error:", error)
-					case "delete":
+						addTask(&taskMaster, Task.Task, Task.Date, Task.Time)
+
 						deleteTask(&taskMaster, num)
-					//	fmt.Println("commmand :", command, "task:", task, "date:", date, "time:", time, "number", num, "error:", error)
 					case "edit":
-						editTask(taskMaster, task, date, time, num)
-						//fmt.Println("commmand :", command, "task:", task, "date:", date, "time:", time, "number", num, "error:", error)
+						editTask(taskMaster, Task.Task, Task.Date, Task.Time, num)
 					case "save":
-						saveList(taskMaster, task)
-					//	fmt.Println("commmand :", command, "task:", task, "date:", date, "time:", time, "number", num, "error:", error)
+						saveList(taskMaster, Task.Task)
 					case "load":
-						taskMaster = loadList(taskMaster, task)
-						//fmt.Println("commmand :", command, "task:", task, "date:", date, "time:", time, "number", num, "error:", error)
+						taskMaster = loadList(taskMaster, Task.Task)
 
 					}
 				}
@@ -426,7 +424,7 @@ func editTask(tasks []taskStruct, readTask string, readDate string, readTime str
 				case 'Y', 'y':
 
 					tasks[index] = taskStruct{readTask, readDate, readTime}
-					fmt.Println("\nEdit Complet...\n")
+					fmt.Println("\nEdit Complet...")
 					break outLoop
 
 				case 'N', 'n':
